@@ -1,5 +1,7 @@
 {
-  "name": "TeLLevoApp",
-  "integrations": {},
+  "name": "skeleton-app",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

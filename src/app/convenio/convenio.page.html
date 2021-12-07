@@ -1,0 +1,54 @@
+<app-encabezado titulo="Comidas" icono="fast-food-outline"></app-encabezado>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Convenio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Datos de convenio</h2>
+  <ion-list *ngFor="let cat of comidas; let i=index" >
+    <ion-text color="primary">
+      <p>Publicidad</p>
+      <ion-card (click)="onClick(cat.strCategory)">
+        <ion-card-header>
+          <ion-card-subtitle>{{cat.strCategory}}</ion-card-subtitle>
+          <ion-card-title></ion-card-title>
+        </ion-card-header>
+        <ion-img src="{{cat.strCategoryThumb}}"></ion-img>
+        <ion-card-content>
+          Hola mundo
+        </ion-card-content>
+      </ion-card>
+    </ion-text>
+  </ion-list>
+
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="negro" id="toolbar">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil"(click)= GoViaje()>Viajes<ion-icon name="car"></ion-icon></ion-button>
+        </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil">Opciones<ion-icon name="settings"></ion-icon></ion-button>
+        </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil" (click)="logout()">Cerrar Sesion<ion-icon name="log-in"></ion-icon></ion-button>
+        </ion-item>
+        
+        
+        
+        
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+</ion-content>

@@ -1,0 +1,111 @@
+<app-encabezado titulo="Comidas" icono="fast-food-outline"></app-encabezado>
+<ion-header>
+  <ion-toolbar color="negro" id="titulo">
+    <ion-title>Mapa</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- mapa-->
+  
+  
+  
+  
+  
+  
+  
+      <div  >
+        <div class="mock-label">Comienzo del viaje</div>
+        <div class="mock-input">{{wayPoints?.start?.place_name}}</div>
+        <ion-item>
+          <ion-button color="negro" class="menu-perfil" (click)="Changestart()" [ngClass]="{'active-way':modeInput ==='start'}">DESTINO INICIAL</ion-button>
+        </ion-item>
+      </div>
+  
+      <div  >
+        <div class="mock-label">Final del viaje</div>
+        <div class="mock-input">{{wayPoints?.end?.place_name}}</div>
+        <ion-item>
+          <ion-button color="negro" class="menu-perfil" (click)="ChangeEnd()" [ngClass]="{'active-way':modeInput ==='end'}">DESTINO FINAL</ion-button>
+        </ion-item>
+      </div>
+      
+        
+         
+      <div id="geocoder" #asGeoCoder class="geocoder"></div>
+
+     
+         
+       
+      
+        
+      
+      
+      
+     
+       
+      
+  
+  
+  
+    <div id="map" #asMap class="map-container"></div>
+  
+
+
+  <ion-item>
+    <button (click)="drawRoute()" color="negro" class="menu-perfil">MARCAR RECORRIDO</button>
+  </ion-item>
+   
+  <div>
+    🚕
+  </div>
+  
+   
+     
+       
+      
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  <!--Menu izquierdo-->
+
+  
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="negro" id="toolbar">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- <ion-item >
+          <ion-button color="negro" class="menu-perfil"(click)=GoViaje()>Viajes<ion-icon name="car"></ion-icon></ion-button>
+        </ion-item> -->
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil">Opciones<ion-icon name="settings"></ion-icon></ion-button>
+        </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil" (click)=GoComida()>Convenio<ion-icon name="log-in"></ion-icon></ion-button>
+        </ion-item>
+        <ion-item >
+          <ion-button color="negro" class="menu-perfil" (click)="logout()">Cerrar Sesion<ion-icon name="log-in"></ion-icon></ion-button>
+        </ion-item>
+        
+        
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  
+  <ion-router-outlet id="main"></ion-router-outlet>  
+<!--fin del menu izquierdo-->
+</ion-content>
+
+

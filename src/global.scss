@@ -24,3 +24,8 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// Se establece que el select tome el 100% del tamaño disponible
+ion-select{
+    max-width: 100% !important;
+}

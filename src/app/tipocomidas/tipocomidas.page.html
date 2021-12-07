@@ -1,0 +1,19 @@
+<app-encabezado titulo="ComitasxTipo" icono="person"></app-encabezado>
+
+<ion-title>Comidas por tipo</ion-title>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let comida of comidas">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>id: {{comida.idMeal}}</ion-card-subtitle>
+        <ion-card-title>{{comida.strMeal}}</ion-card-title>
+        <ion-icon name="ellipsis-vertical" color="primary" (click)="presentActionSheet(comida.idMeal)"></ion-icon>
+      </ion-card-header>
+      <ion-img src="{{comida.strMealThumb}}"></ion-img>
+      <ion-card-content (click)="onClick()">
+        Ver Receta
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
